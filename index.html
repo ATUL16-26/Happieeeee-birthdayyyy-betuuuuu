@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Betuuu ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ffb6c1, #ffd1dc);
+  font-family: Georgia, serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  padding: 35px 18px;
+}
+
+.top-heart {
+  font-size: 55px;
+  animation: beat 1s infinite;
+}
+
+h1 {
+  font-size: 34px;
+  margin: 20px 0;
+  text-shadow: 2px 3px 8px #d94b70;
+}
+
+.name {
+  font-size: 36px;
+  color: #fff5a5;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 19px;
+  margin: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 25px;
+  padding: 28px 20px;
+  margin-top: 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  backdrop-filter: blur(8px);
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+button {
+  background: white;
+  color: #f04476;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px #d85c7a;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.hidden {
+  display: none;
+}
+
+#wishes {
+  margin-top: 30px;
+  animation: appear 1.5s ease;
+}
+
+footer {
+  margin-top: 45px;
+  padding-bottom: 20px;
+  font-size: 17px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  animation: float 7s linear forwards;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.25); }
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="top-heart">💗</div>
+
+  <h1>Happieeeee birthdayyyy</h1>
+
+  <div class="name">Betuuuuu ❤️</div>
+
+  <div class="date">🎂 16 November 🎂</div>
+
+  <div class="card">
+
+    <p>
+      Today is all about you, my favourite person! 💕
+    </p>
+
+    <p>
+      I have a little surprise for you...
+    </p>
+
+    <button onclick="openWish()">
+      Open Your Surprise 🎁
+    </button>
+
+    <div id="wishes" class="hidden">
+
+      <div style="font-size:45px;">🎀💖🌹</div>
+
+      <h2>Happy Birthday, My Love! ❤️</h2>
+
+      <p>
+        Happieeeee birthdayyyy betuuuuu! 🥹❤️
+        You are one of the most beautiful parts of my life.
+        Your smile makes my days brighter and your happiness
+        means everything to me.
+      </p>
+
+      <p>
+        I wish I could make every single moment of your life
+        as beautiful as you make mine. May all your dreams
+        come true and may your life always be filled with
+        happiness, love and endless smiles. 💗
+      </p>
+
+      <p>
+        Thank you for being in my life.
+        No matter what, always keep smiling and remember
+        how special you are to me.
+      </p>
+
+      <p>
+        I love you so much, my betuuu! ❤️🫶
+      </p>
+
+      <h2>Forever Special 💞</h2>
+
+    </div>
+
+  </div>
+
+  <footer>
+    Made with ❤️ By ATUL
+  </footer>
+
+</div>
+
+<script>
+
+function openWish() {
+  document.getElementById("wishes")
+    .classList.remove("hidden");
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+
+  heart.className = "heart";
+  heart.innerHTML = ["💗","❤️","💕","✨","🌸"][
+    Math.floor(Math.random() * 5)
+  ];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (18 + Math.random() * 22) + "px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+</html>
